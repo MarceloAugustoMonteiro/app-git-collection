@@ -20,6 +20,12 @@ export const Header = styled.header`
       margin-right: 4px;
     }
   }
+
+  @media(max-width: 720px){
+    a{
+      margin-top: auto;
+    }
+  }
 `;
 
 export const RepoInfo = styled.section`
@@ -70,6 +76,21 @@ export const RepoInfo = styled.section`
       color: #737380;
     }
   }
+
+  @media(max-width: 720px){
+    li{
+      & + li{
+        margin-left: 30px;
+      }
+    }
+  }
+
+  @media(max-width: 980px){
+    ul{
+      display: flex;
+      justify-content: center;
+    }
+  }
 `;
 
 export const Issues = styled.div`
@@ -110,6 +131,7 @@ export const Issues = styled.div`
       margin-left: auto;
       color: #7b7bd6;
     }
-
   }
+
+
 `;

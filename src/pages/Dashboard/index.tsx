@@ -14,7 +14,7 @@ interface GitHubRepository {
   };
 }
 
-export const DashBoard: React.FC = () => {
+const DashBoard: React.FC = () => {
   const [repos, setRepos] = useState<GitHubRepository[]>(() => {
     const storageRepos = localStorage.getItem('@GitCollection:repositories');
     if (storageRepos){
@@ -39,8 +39,6 @@ export const DashBoard: React.FC = () => {
     event: FormEvent<HTMLFormElement>,
     ): Promise<void> {
     event.preventDefault();
-    // const response = await.get<GitHubRepository>(`repos/${newRepo}`);
-    // const repository = response.data
     if(!newRepo) {
       setInputError('Informe o username/repositório');
       return;
@@ -55,7 +53,7 @@ export const DashBoard: React.FC = () => {
       setNewRepo('');
       setInputError('');
     } catch {
-      setInputError('Repositório nao encontrado no Github');
+      setInputError('Repositório não encontrado no Github!');
     }
   }
 
@@ -67,7 +65,7 @@ export const DashBoard: React.FC = () => {
 
       <Title>Catálogo de repositórios do GitHub</Title>
 
-      <Form hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
+      <Form ref={formEl} hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
         <input type="text" placeholder='username/repository_name' onChange={handleInputChange} />
         <button type='submit'>Buscar</button>
       </Form>
@@ -75,13 +73,13 @@ export const DashBoard: React.FC = () => {
       {inputError && <Error>{inputError}</Error> }
 
       <Repos>
-        {repos.map(repository => (
-          <Link to={`/repositories/${repository.full_name}`} key={repository.full_name}>
+        {repos.map((repository, index) => (
+          <Link to={`/repositories/${repository.full_name}`} key={repository.full_name + index}>
           <img
             src={repository.owner.avatar_url}
             alt={repository.owner.login}
           />
-          <div>
+          <div style={{wordBreak: 'break-word'}}>
             <strong>{repository.full_name}</strong>
             <p>{repository.description}</p>
           </div>
@@ -93,4 +91,4 @@ export const DashBoard: React.FC = () => {
   );
 };
 
-
+export default DashBoard;

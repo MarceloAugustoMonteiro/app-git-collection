@@ -5,6 +5,7 @@ import { api } from '../../services/api';
 import { Header, RepoInfo, Issues } from './styles';
 import logo from '../../assets/logo-github.png';
 import { Image } from '../Dashboard/styles';
+import { FaStar, FaShareSquare, FaEnvelopeOpenText } from "react-icons/fa";
 
 interface RepositoryParams {
   repository: string;
@@ -31,7 +32,7 @@ interface GitHubIssue {
   }
 }
 
-export const Repo: React.FC = () => {
+const Repo: React.FC = () => {
   const [repository, setRepository] = useState<GitHubRepository | null>(null);
   const [issues, setIssues] = useState<GitHubIssue[]>([]);
   const { params } = useRouteMatch<RepositoryParams>();
@@ -49,9 +50,11 @@ export const Repo: React.FC = () => {
   return (
     <>
       <Header>
-        <Image>
-          <img src={logo} alt='GitCollection' />
-        </Image>
+        <Link to={"/"}>
+          <Image>
+            <img src={logo} alt='GitCollection' />
+          </Image>
+        </Link>
 
         <Link to="/">
           <FiChevronLeft />
@@ -71,15 +74,24 @@ export const Repo: React.FC = () => {
         <ul>
           <li>
             <strong>{repository.stargazers_count}</strong>
-            <span>Stars</span>
+            <span style={{display: 'flex', alignItems: 'center'}}>
+              Stars
+              <FaStar color='#ffa5009c' style={{marginLeft: '2px'}} />
+            </span>
           </li>
           <li>
             <strong>{repository.forks_count}</strong>
-            <span>Forks</span>
+            <span style={{display: 'flex', alignItems: 'center'}}>
+              Forks
+              <FaShareSquare style={{marginLeft: '3px'}} />
+            </span>
           </li>
           <li>
             <strong>{repository.open_issues_count}</strong>
-            <span>Issues abertas</span>
+            <span style={{display: 'flex', alignItems: 'center'}}>
+              Issues abertas
+              <FaEnvelopeOpenText color='#0080009c' style={{marginLeft: '3px'}} />
+            </span>
           </li>
         </ul>
       </RepoInfo>
@@ -100,4 +112,4 @@ export const Repo: React.FC = () => {
   );
 };
 
-
+export default Repo;
