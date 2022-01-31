@@ -15,14 +15,10 @@ link: gitcollection-marcelo.netlify.app
 
 ## Preview: <br><br><br>
 
-**Home:** <br><br><br>
-
 ![Home](https://cdn.discordapp.com/attachments/900704871517409340/937845639327412264/print-1.png) <br><br><br>
-
-**Repositories:** <br><br><br>
 
 ![Repositories](https://cdn.discordapp.com/attachments/900704871517409340/937845640002691162/print-2.png)
 
-<br><br><br><br>
+<br>
 
 :pencil2: **Marcelo A. Monteiro** :chart:
