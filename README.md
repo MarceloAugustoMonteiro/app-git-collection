@@ -9,16 +9,16 @@
 • React Lazy & React Suspense; <br>
 • Axios;
 
-* Deploy feito no Netlify;
+Deploy feito no Netlify;
 
 link: gitcollection-marcelo.netlify.app
 
-#### Preview: 
+### Preview: 
 
-Home:
+### Home:
 
-![Home](https://cdn.discordapp.com/attachments/900704871517409340/937845639327412264/print-1.png)
+![Home](https://cdn.discordapp.com/attachments/900704871517409340/937845639327412264/print-1.png) <br>
 
-Repositories:
+### Repositories:
 
 ![Repositories](https://cdn.discordapp.com/attachments/900704871517409340/937845640002691162/print-2.png)
