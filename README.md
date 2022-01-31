@@ -1,6 +1,6 @@
-## App - Catálogo de repositórios do GitHub
+## :arrow_right: App - Catálogo de repositórios do GitHub
 
-### :arrow_right: Consumindo API do GitHub para criação de um catálogo de repositórios.
+### Consumindo API do GitHub para criação de um catálogo de repositórios.
 
 • Typescript; <br>
 • Styled Components; <br>
