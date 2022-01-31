@@ -2,11 +2,11 @@
 
 ### Consumindo API do GitHub para criação de um catálogo de repositórios.
 
-• Typescript;
-• Styled Components;
-• React Hooks;
-• React Router;
-• React Lazy & React Suspense;
+• Typescript; <br>
+• Styled Components; <br>
+• React Hooks; <br>
+• React Router; <br>
+• React Lazy & React Suspense; <br>
 • Axios;
 
 * Deploy feito no Netlify;
