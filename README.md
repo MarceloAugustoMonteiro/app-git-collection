@@ -1,6 +1,6 @@
-## :arrow_right: App - Catálogo de repositórios do GitHub
+## App – GitHub Repository Catalog
 
-### Consumindo API do GitHub para criação de um catálogo de repositórios.
+### Consuming the GitHub API to create a repository catalog.
 
 • Typescript; <br>
 • Styled Components; <br>
@@ -9,18 +9,6 @@
 • React Lazy & React Suspense; <br>
 • Axios;
 
-Deploy feito no Netlify;
+Deployed on Netlify.
 
-link: gitcollection-marcelo.netlify.app <br>
-
-## Preview: 
-
-<br>
-
-![Home](https://cdn.discordapp.com/attachments/900704871517409340/937845639327412264/print-1.png) <br>
-
-![Repositories](https://cdn.discordapp.com/attachments/900704871517409340/937845640002691162/print-2.png)
-
-<br>
-
-:pencil2: **Marcelo A. Monteiro** :chart:
+Link: https://gitcollection-marcelo.netlify.app
